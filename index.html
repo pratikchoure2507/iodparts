@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iodParts - Electronic Components Distributors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="init()">
+    <div class="home" id="home">
+
+        <div class="card">
+            <img class="img" src="First.PNG" alt="First img">
+            <p>1500 $ for each</p>
+            <button id="BBC" onclick="purchase(0)">Buy</button>
+        </div>
+        <div class="card">
+            <img class="img" src="Second.PNG" alt="First img">
+            <p>600 $ for each</p>
+            <button id="Arduino" onclick="purchase(1)">Buy</button>
+        </div>
+    </div>
+    <div class="shopping" id="shopping">
+        <div class="">Address</div>
+        <div>
+            <input type="text" id="fullName" placeholder="Enter you Full Name">
+        </div>
+        <div>
+            <input type="email" id="email" placeholder="Enter you Email">
+        </div>
+        <div>
+            <input type="number" id="contact" placeholder="Enter you Contact deatils">
+        </div>
+        <label for="vehicle0"> Select you Address</label><br>
+        <select name="Addess" id="Addressoption" onchange="optionclick(this.selectedIndex)" defaultValue="0">
+            <!-- <option></option> -->
+            <option value="" selected="selected" hidden="hidden">Choose here</option>
+            <option id="0">123,Pune,Maharashtra</option>
+            <option id="1">234,Mumbai,Maharashtra</option>
+            <option id="2">345,Pune,Maharashtra</option>
+        </select>
+        <div>
+            <input type="checkbox" name="billing_address" value="checked">
+            <label for="vehicle1"> Billing address same as shipping address</label><br>
+        </div>
+        <input type="text" placeholder="Enter you address Address" id="Address2">
+        <button type="submit" value="submit" id="sumbit" onclick="addressSubmit()">Submit</button>
+        <!-- disabled="true" -->
+    </div>
+    <div class="billing" id="billing">
+        <div>Billing</div>
+        <div>Enter your Card Deatils</div>
+        <input type="radio" id="card1" name="Card" value="Debit">
+        <label for="html">Debit Card</label><br>
+        <input type="radio" id="card2" name="Card" value="Credit">
+        <label for="css">Credit Card</label><br>
+        <div>
+            <input id="name" type="text" placeholder="Enter Your Name">
+            <div>
+                <input id="cardnumber" type="number" placeholder="Card Number" minlength="16" required>
+            </div>
+            <div>
+                <input id="cvv" type="number" placeholder="CVV" minlength="3" required>
+            </div>
+            <div>
+                <button class="submit" onclick="billing()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="confirm" id="confirm">
+        <div>Thank You. Your order is confirm. Visit agian.</div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
